@@ -7,6 +7,7 @@ class SocialRec extends Component {
     onSocialClick = (ref) => {
         window.open(ref, '_blank')
     }
+
     render() {
         const { classes } = this.props;
         return (
@@ -23,7 +24,7 @@ class SocialRec extends Component {
                     <Arrow style={{ marginBottom: 10 }} />
                     insta
                 </div>
-            </div >
+            </div>
         )
     }
 }
