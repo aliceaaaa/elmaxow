@@ -12,7 +12,6 @@ export default {
 
   header: {
     display: 'flex',
-    flexWrap: 'nowrap',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -20,8 +19,36 @@ export default {
     height: 72,
     fontSize: 24,
     alignItems: 'center',
-    zIndex: 9
+    zIndex: 9,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
+  },
 
+  header1: {
+    animation: '$marquee 20s linear infinite'
+  },
+
+  header2: {
+    animation: '$marquee2 20s linear infinite',
+    animationDelay: '10s'
+  },
+
+  '@keyframes marquee': {
+    from: {
+      transform: 'translateX(-100%)'
+    },
+    to: {
+      transform: 'translateX(100%)'
+    }
+  },
+
+  '@keyframes marquee2': {
+    from: {
+      transform: 'translateX(-200%)'
+    },
+    to: {
+      transform: 'translateX(0%)'
+    }
   },
 
   runLine: {
