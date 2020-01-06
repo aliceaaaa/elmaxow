@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 import styles from '../styles';
-import { ReactComponent as Arrow } from './arrow.svg';
+import { ReactComponent as Arrow } from '../svgs/arrow.svg';
 
 class SocialRec extends Component {
     onSocialClick = (ref) => {

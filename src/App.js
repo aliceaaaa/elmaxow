@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import ReactCursorPosition from 'react-cursor-position';
 import styles from './styles';
 import injectSheet from 'react-jss';
-import SocialRec from './SocialRec';
-import EmailRec from './EmailRec';
-import Header from './Header';
-import { ReactComponent as Star } from './star.svg';
+import SocialRec from './sections/SocialRec';
+import EmailRec from './sections/EmailRec';
+import Header from './sections/Header';
+import { ReactComponent as Star } from './svgs/star.svg';
+import { ReactComponent as Star2 } from './svgs/star2.svg';
+import PhotoRec from './sections/PhotoRec';
 
 
 class App extends Component {
@@ -16,12 +17,11 @@ class App extends Component {
   }
 
   onMouseMove = (e) => {
-    this.setState({ x: e.clientX, y: e.clientY });
+    this.setState({ x: e.clientX - 15, y: e.clientY - 15 });
   }
 
   render() {
     const { classes } = this.props;
-    const { color } = this.state;
 
     return (
       <div className={classes.app}
@@ -29,18 +29,17 @@ class App extends Component {
         onMouseEnter={() => this.setState({ mouseOn: true })}
         onMouseLeave={() => this.setState({ mouseOn: false })}
       >
+        {this.state.mouseOn && <div className={classes.circle}
+          style={{ top: this.state.y, left: this.state.x }}
+        />}
         <Header />
         <div className={classes.maxChanba}>
           max chanba
         </div>
-        <div className={classes.emptyRec} />
+        <PhotoRec />
         <Star className={classes.star} />
+        <Star2 className={classes.star2} />
         <SocialRec />
-
-        {this.state.mouseOn && <div className={classes.circle}
-          style={{ top: this.state.y, left: this.state.x }}
-        />}
-
         <EmailRec />
         <div className={classes.sup}>Sup</div>
         <div className={classes.guys}>guys</div>
@@ -49,12 +48,13 @@ class App extends Component {
             I am Maximilian – graphic designer living in Moscow.
           </div>
           <div className={classes.zeroRec}>
-            Now work at &nbsp;
+            Now work at
           <a href='http://zero.ru'
               target='_blank'
+              rel="noopener noreferrer"
               className={classes.zeroLink}
             >
-              Zero studio
+              {' '}Zero studio
             </a>
             .
         </div>

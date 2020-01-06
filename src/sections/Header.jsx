@@ -6,9 +6,10 @@ class Header extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className={classes.header}>
-                hello hello hello hello hello hello hello
-            </div>
+            <marquee className={classes.header} behavior='scroll' direction='right'>
+                hello hello hello hello hello hello hello hello hello hello hello hello hello hello
+            </marquee>
+
         )
     }
 }

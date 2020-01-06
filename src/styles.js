@@ -17,14 +17,19 @@ export default {
     top: 0,
     left: 0,
     width: 450,
-    heigh: 72,
+    height: 72,
     fontSize: 24,
-    overflow: 'hidden',
-    whiteSpace: 'nowrap',
-    marginLeft: -7
+    alignItems: 'center',
+    zIndex: 9
+
   },
 
-  emptyRec: {
+  runLine: {
+    animation: 'scroll-left 5s linear infinite',
+    zIndex: 9
+  },
+
+  photoRec: {
     display: 'flex',
     position: 'absolute',
     bottom: 0,
@@ -33,6 +38,7 @@ export default {
     height: 441,
     borderLeft: '2px solid #000000',
     borderTop: '2px solid #000000',
+    zIndex: 9,
   },
 
   socialRec: {
@@ -44,6 +50,7 @@ export default {
     right: 320,
     borderLeft: '2px solid #000000',
     borderTop: '2px solid #000000',
+    zIndex: 9
   },
 
   emailRec: {
@@ -55,6 +62,7 @@ export default {
     height: 257,
     borderLeft: '2px solid #000000',
     borderTop: '2px solid #000000',
+    zIndex: 9
   },
 
   infoRec: {
@@ -63,7 +71,8 @@ export default {
     bottom: 125,
     right: 470,
     width: 500,
-    height: 175
+    height: 175,
+    zIndex: 9
   },
 
   aboutMeRec: {
@@ -72,7 +81,8 @@ export default {
     color: 'inherit',
     position: 'absolute',
     left: 0,
-    top: 30
+    top: 30,
+    zIndex: 9
   },
 
   zeroRec: {
@@ -81,7 +91,8 @@ export default {
     color: 'inherit',
     position: 'absolute',
     right: 110,
-    top: 30
+    top: 30,
+    zIndex: 9
   },
 
   dribble: {
@@ -94,6 +105,7 @@ export default {
     fontWeight: 'bold',
     fontSize: 24,
     lineHeight: '95.6%',
+    zIndex: 9,
 
     '&:hover': {
       color: '#FF0000'
@@ -110,6 +122,7 @@ export default {
     fontWeight: 'bold',
     fontSize: 24,
     lineHeight: '95.6%',
+    zIndex: 9,
 
     '&:hover': {
       color: '#FF0000'
@@ -127,6 +140,7 @@ export default {
     fontWeight: 'bold',
     fontSize: 24,
     lineHeight: '95.6%',
+    zIndex: 9,
 
     '&:hover': {
       color: '#FF0000'
@@ -143,6 +157,7 @@ export default {
     height: 105,
     fontSize: 16,
     lineHeight: '133%',
+    zIndex: 9
   },
 
   maxChanba: {
@@ -155,13 +170,24 @@ export default {
     color: '#FF0000',
     fontSize: 30,
     fontWeight: 'bold',
-    lineHeight: '95.6%'
+    lineHeight: '95.6%',
+    zIndex: 9
   },
+
   star: {
     display: 'flex',
     position: 'absolute',
-    bottom: 0,
-    left: 0
+    bottom: -48,
+    left: -223,
+    zIndex: 1
+  },
+
+  star2: {
+    display: 'flex',
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    zIndex: 1
   },
 
   sup: {
@@ -172,7 +198,8 @@ export default {
     top: 170,
     fontWeight: 'bold',
     fontSize: 120,
-    lineHeight: '79.6%'
+    lineHeight: '79.6%',
+    zIndex: 9
   },
 
   guys: {
@@ -183,22 +210,36 @@ export default {
     top: 266,
     fontWeight: 'bold',
     fontSize: 120,
-    lineHeight: '79.6%'
+    lineHeight: '79.6%',
+    zIndex: 9
   },
 
   circle: {
     position: 'absolute',
     background: 'transparent',
-    width: 50,
-    height: 50,
+    width: 30,
+    height: 30,
     borderRadius: 50,
-    border: '2px solid #000000'
+    border: '2px solid #000000',
+    zIndex: 2
   },
 
   zeroLink: {
     textDecoration: 'none',
     color: '#000000',
     cursor: 'none',
+    zIndex: 9,
+
+    '&:hover': {
+      color: '#FF0000'
+    }
+  },
+
+  emailReference: {
+    textDecoration: 'none',
+    color: '#000',
+    cursor: 'none',
+    zIndex: 9,
 
     '&:hover': {
       color: '#FF0000'
