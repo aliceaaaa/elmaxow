@@ -72,7 +72,7 @@ export default {
     display: 'flex',
     position: 'absolute',
     bottom: 0,
-    width: 537,
+    width: 667,
     height: 125,
     right: 320,
     borderLeft: '2px solid #000000',
@@ -145,7 +145,7 @@ export default {
     width: 103,
     height: 44,
     marginTop: 40,
-    marginLeft: 85,
+    marginLeft: 142,
     fontWeight: 'bold',
     fontSize: 24,
     lineHeight: '95.6%',
@@ -163,7 +163,7 @@ export default {
     width: 74,
     height: 44,
     marginTop: 40,
-    marginLeft: 85,
+    marginLeft: 142,
     fontWeight: 'bold',
     fontSize: 24,
     lineHeight: '95.6%',
@@ -204,8 +204,8 @@ export default {
   star: {
     display: 'flex',
     position: 'absolute',
-    bottom: -48,
-    left: -223,
+    bottom: 0,
+    left: 0,
     zIndex: 1
   },
 
