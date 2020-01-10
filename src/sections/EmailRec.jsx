@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 import styles from '../styles';
-import { ReactComponent as Plus } from '../svgs/plus.svg';
 
 class EmailRec extends Component {
     onMailClick = () => {
@@ -12,12 +11,12 @@ class EmailRec extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.emailRec}>
-                <Plus style={{ marginTop: 20, marginLeft: 20 }} />
-                <div className={classes.emailText}>
-                    Or drop me a line at
+                <div style={{ fontSize: 'calc(30px + 3*(100vw - 480px)/1440)', }}>+</div>
+                <div className={classes.emailText} style={window.innerWidth >= 1440 ? {} : { fontSize: 'calc(10px + 3*(100vw - 480px)/1440)' }}>Or drop me a line at {' '}
                     <a
                         href="mailto:elmaxow@gmail.com"
                         className={classes.emailReference}
+                        style={window.innerWidth >= 1440 ? {} : { fontSize: 'calc(10px + 3*(100vw - 480px)/1440)' }}
                     >
                         elmaxow (at) gmail (dot) com
                     </a>

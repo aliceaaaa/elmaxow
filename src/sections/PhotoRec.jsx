@@ -40,7 +40,7 @@ class PhotoRec extends Component {
             <div className={classes.photoRec}
                 onMouseOver={this.changePhoto}
                 onMouseOut={this.changeStop}
-                style={{ backgroundImage: `url(${this.state.pic})`, backgroundSize: 'contain' }} />
+                style={{ backgroundImage: `url(${this.state.pic})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} />
         )
     }
 

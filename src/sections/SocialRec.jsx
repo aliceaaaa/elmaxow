@@ -12,15 +12,15 @@ class SocialRec extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.socialRec}>
-                <div className={classes.dribble} onClick={() => this.onSocialClick('https://dribbble.com/chanba')}>
+                <div className={classes.dribble} onClick={() => this.onSocialClick('https://dribbble.com/chanba')} style={window.innerWidth >= 1440 ? {} : { fontSize: 'calc(12px + 3*(100vw - 480px)/1440)' }}>
                     <Arrow style={{ marginBottom: 10 }} />
                     dribbble
                 </div>
-                <div className={classes.behance} onClick={() => this.onSocialClick('https://behance.net/chanba')}>
+                <div className={classes.behance} onClick={() => this.onSocialClick('https://behance.net/chanba')} style={window.innerWidth >= 1440 ? {} : { fontSize: 'calc(12px + 3*(100vw - 480px)/1440)' }}>
                     <Arrow style={{ marginBottom: 10 }} />
                     behance
                 </div>
-                <div className={classes.insta} onClick={() => this.onSocialClick('https://instagram.com/elmaxow')}>
+                <div className={classes.insta} onClick={() => this.onSocialClick('https://instagram.com/elmaxow')} style={window.innerWidth >= 1440 ? {} : { fontSize: 'calc(12px + 3*(100vw - 480px)/1440)' }}>
                     <Arrow style={{ marginBottom: 10 }} />
                     insta
                 </div>

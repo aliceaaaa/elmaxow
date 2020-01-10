@@ -33,21 +33,24 @@ class App extends Component {
           style={{ top: this.state.y, left: this.state.x }}
         />}
         <Header />
-        <div className={classes.maxChanba}>
+        <div className={classes.maxChanba} style={window.innerWidth < 1024 ? { right: 79 } : {}}>
           max chanba
         </div>
         <PhotoRec />
-        <Star className={classes.star} />
+        {window.innerWidth >= 1440 && <Star className={classes.star} />}
         <Star2 className={classes.star2} />
         <SocialRec />
         <EmailRec />
-        <div className={classes.sup}>Sup</div>
-        <div className={classes.guys}>guys</div>
-        <div className={classes.infoRec}>
-          <div className={classes.aboutMeRec}>
-            I am Maximilian – graphic designer living in Moscow.
+        <div className={classes.sup}
+          style={window.innerWidth > 1024 ? {} : { left: 40, top: 170 }}>Sup</div>
+        <div className={classes.guys} style={window.innerWidth > 1024 ? {} : { left: 110, top: 250 }}>guys</div>
+        <div className={classes.infoBox}>
+          <div className={classes.aboutMeRec} style={window.innerWidth >= 1440 ? {} : { fontSize: 'calc(10px + 3*(100vw - 480px)/1440)' }} >
+            I am Maximilian – <br />
+            graphic designer living <br />
+            in Moscow
           </div>
-          <div className={classes.zeroRec}>
+          <div className={classes.zeroRec} style={window.innerWidth >= 1440 ? {} : { fontSize: 'calc(10px + 3*(100vw - 480px)/1440)' }}>
             Now work at
           <a href='http://zero.ru'
               target='_blank'
@@ -56,8 +59,7 @@ class App extends Component {
             >
               {' '}Zero studio
             </a>
-            .
-        </div>
+          </div>
         </div>
       </div>
     )
