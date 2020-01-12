@@ -12,7 +12,7 @@ class StarSmall extends Component {
     const width = window.innerWidth / 18;
     const style = isMobile
       ? {
-          bottom: 0,
+          top: 612,
           right: 0,
           width: 49,
           height: 51,
