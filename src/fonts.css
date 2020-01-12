@@ -3,14 +3,14 @@
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/space-mono-v5-latin-regular.eot");
+  src: url("./fonts/space-mono-v5-latin-regular.eot");
   src: local("Space Mono"), local("SpaceMono-Regular"),
-    url("../fonts/space-mono-v5-latin-regular.eot?#iefix")
+    url("./fonts/space-mono-v5-latin-regular.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/space-mono-v5-latin-regular.woff2") format("woff2"),
-    url("../fonts/space-mono-v5-latin-regular.woff") format("woff"),
-    url("../fonts/space-mono-v5-latin-regular.ttf") format("truetype"),
-    url("../fonts/space-mono-v5-latin-regular.svg#SpaceMono") format("svg");
+    url("./fonts/space-mono-v5-latin-regular.woff2") format("woff2"),
+    url("./fonts/space-mono-v5-latin-regular.woff") format("woff"),
+    url("./fonts/space-mono-v5-latin-regular.ttf") format("truetype"),
+    url("./fonts/space-mono-v5-latin-regular.svg#SpaceMono") format("svg");
 }
 
 /* space-mono-700 - latin */
@@ -18,12 +18,12 @@
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/space-mono-v5-latin-700.eot");
+  src: url("./fonts/space-mono-v5-latin-700.eot");
   src: local("Space Mono Bold"), local("SpaceMono-Bold"),
-    url("../fonts/space-mono-v5-latin-700.eot?#iefix")
+    url("./fonts/space-mono-v5-latin-700.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/space-mono-v5-latin-700.woff2") format("woff2"),
-    url("../fonts/space-mono-v5-latin-700.woff") format("woff"),
-    url("../fonts/space-mono-v5-latin-700.ttf") format("truetype"),
-    url("../fonts/space-mono-v5-latin-700.svg#SpaceMono") format("svg");
+    url("./fonts/space-mono-v5-latin-700.woff2") format("woff2"),
+    url("./fonts/space-mono-v5-latin-700.woff") format("woff"),
+    url("./fonts/space-mono-v5-latin-700.ttf") format("truetype"),
+    url("./fonts/space-mono-v5-latin-700.svg#SpaceMono") format("svg");
 }
