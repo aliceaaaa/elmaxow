@@ -1,68 +1,60 @@
-import React, { Component } from 'react';
-import styles from './styles';
-import injectSheet from 'react-jss';
-import SocialRec from './sections/SocialRec';
-import EmailRec from './sections/EmailRec';
-import Header from './sections/Header';
-import { ReactComponent as Star } from './svgs/star.svg';
-import { ReactComponent as Star2 } from './svgs/star2.svg';
-import PhotoRec from './sections/PhotoRec';
-
+import React, { Component } from "react";
+import injectSheet from "react-jss";
+import styles from "./styles";
+import SocialBox from "./sections/SocialBox";
+import EmailBox from "./sections/EmailBox";
+import Header from "./sections/Header";
+import PhotoBox from "./sections/PhotoBox";
+import InfoBox from "./sections/InfoBox";
+import SupGuys from "./sections/SupGuys";
+import StarBig from "./sections/StarBig";
+import MaxChanba from "./sections/MaxChanba";
+import StarSmall from "./sections/StarSmall";
+import Pluses from "./sections/Pluses";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { x: 0, y: 0, mouseOn: false }
+    this.state = { x: 0, y: 0, mouseOn: false };
   }
 
-  onMouseMove = (e) => {
-    this.setState({ x: e.clientX - 15, y: e.clientY - 15 });
-  }
+  onMouseMove = e => {
+    this.setState({ x: e.clientX - 20, y: e.clientY - 20 });
+  };
 
   render() {
     const { classes } = this.props;
+    const { mouseOn, x, y } = this.state;
+    const isMobile = window.innerWidth < 480;
+    const style = isMobile
+      ? { cursor: "default", maxWidth: 375, overflowX: "hidden !important" }
+      : {};
 
     return (
-      <div className={classes.app}
+      <div
+        className={classes.app}
+        style={style}
         onMouseMove={e => this.onMouseMove(e)}
         onMouseEnter={() => this.setState({ mouseOn: true })}
         onMouseLeave={() => this.setState({ mouseOn: false })}
       >
-        {this.state.mouseOn && <div className={classes.circle}
-          style={{ top: this.state.y, left: this.state.x }}
-        />}
+        {!isMobile && mouseOn && (
+          <div className={classes.circle} style={{ top: y, left: x }} />
+        )}
         <Header />
-        <div className={classes.maxChanba} style={window.innerWidth < 1024 ? { right: 79 } : {}}>
-          max chanba
-        </div>
-        <PhotoRec />
-        {window.innerWidth >= 1440 && <Star className={classes.star} />}
-        <Star2 className={classes.star2} />
-        <SocialRec />
-        <EmailRec />
-        <div className={classes.sup}
-          style={window.innerWidth > 1024 ? {} : { left: 40, top: 170 }}>Sup</div>
-        <div className={classes.guys} style={window.innerWidth > 1024 ? {} : { left: 110, top: 250 }}>guys</div>
-        <div className={classes.infoBox}>
-          <div className={classes.aboutMeRec} style={window.innerWidth >= 1440 ? {} : { fontSize: 'calc(10px + 3*(100vw - 480px)/1440)' }} >
-            I am Maximilian – <br />
-            graphic designer living <br />
-            in Moscow
-          </div>
-          <div className={classes.zeroRec} style={window.innerWidth >= 1440 ? {} : { fontSize: 'calc(10px + 3*(100vw - 480px)/1440)' }}>
-            Now work at
-          <a href='http://zero.ru'
-              target='_blank'
-              rel="noopener noreferrer"
-              className={classes.zeroLink}
-            >
-              {' '}Zero studio
-            </a>
-          </div>
-        </div>
+        <MaxChanba />
+        <PhotoBox />
+        <StarBig />
+        <StarSmall />
+        <SocialBox />
+        <EmailBox />
+        <SupGuys />
+        <InfoBox />
+        {isMobile && <Pluses isThree />}
+        {isMobile && <Pluses isThree={false} />}
       </div>
-    )
+    );
   }
 }
 
