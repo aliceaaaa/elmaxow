@@ -52,7 +52,7 @@ class Main extends Component {
         <SupGuys />
         <InfoBox />
         {isMobile && <Pluses isThree />}
-        {isMobile && <Pluses isThree={false} />}
+        {!isMobile && <Pluses isThree={false} />}
       </div>
     );
   }
